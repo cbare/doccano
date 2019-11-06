@@ -137,6 +137,18 @@ div.columns(v-cloak="")
       div.column
         block annotation-area
 
+        div.card(
+            style="margin-top: 12px"
+          )
+          div.card-content
+            div.content.scrollable(v-if="documentMetadata != null", ref="textbox")
+              vue-json-pretty(
+                  v-bind:data="documentMetadata"
+                  v-bind:show-double-quotes="false"
+                  v-bind:show-line="false"
+                  style="line-height: 110%"
+                )
+
       div.column(v-if="documentMetadata != null && documentMetadata.documentSourceUrl != null")
         preview(v-bind:url="documentMetadata.documentSourceUrl")
 
