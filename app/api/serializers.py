@@ -105,7 +105,8 @@ class ProjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Project
         fields = ('id', 'name', 'description', 'guideline', 'users', 'current_users_role', 'project_type', 'image',
-                  'updated_at', 'randomize_document_order', 'collaborative_annotation')
+                  'updated_at', 'randomize_document_order', 'collaborative_annotation',
+                  'show_document_metadata')
         read_only_fields = ('image', 'updated_at', 'current_users_role')
 
 
