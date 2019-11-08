@@ -138,6 +138,7 @@ div.columns(v-cloak="")
         block annotation-area
 
         div.card(
+            v-if="documentMetadata != null && show_document_metadata",
             style="margin-top: 12px"
           )
           div.card-content

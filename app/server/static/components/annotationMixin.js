@@ -253,6 +253,7 @@ export default {
     });
     HTTP.get().then((response) => {
       this.guideline = response.data.guideline;
+      this.show_document_metadata = response.data.show_document_metadata;
       const roles = response.data.current_users_role;
       this.isAnnotationApprover = roles.is_annotation_approver || roles.is_project_admin;
     });
